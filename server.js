@@ -140,4 +140,4 @@ io.sockets.on('connection', function (socket) { // First connection
 });
 
 //Uncomment to enable opening window
-//opener('http://localhost:' + config.PORT);
+opener('http://localhost:' + config.PORT);
