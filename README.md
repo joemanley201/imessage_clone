@@ -27,6 +27,14 @@ Clone of iMessage Application
     * `util` - Util object to support library of utility methods
 7. `server.js` - Node.js server entry point
 
+### Existing usernames, passwords - (username/password)
+1. joe/1234
+2. michael/1234
+3. batman/1234
+4. bruce/1234
+5. clark/1234
+6. superman/1234
+
 
 ### Registration
 Even though there are existing users already (if you had downloaded the imessage.db file), you can create your own contact from the registration page.
