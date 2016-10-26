@@ -3,9 +3,10 @@ Clone of iMessage Application
 ### Installation and launching
 1. `npm init` to install the application.
 2. Install the node_modules and the existing imessage.db has enough data to get started.
-3. Once all the node_modules are installed, start the server by using `node server.js` or `nodemon server.js`.
+3. Once all the node_modules are installed, start the server by using, `node server.js` or `nodemon server.js`.
 4. `nodemon` monitors the server for changes and restarts when needed.
-5. Navigate to `http://localhost:5000/` on your browser to start the application.
+5. NPM package `opener` launches the application in a new tab in your default browser.
+6. If it doesn't happen, navigate to `http://localhost:5000/` on your browser to start the application or check for logs in the console.
 
 ### File structure
 1. `config/` - Configuration.json to indicate host, ports, log levels, paths, etc.
