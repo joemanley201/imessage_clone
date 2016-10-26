@@ -1,0 +1,475 @@
+.noPaddingLeft {
+    padding-left: 0px;
+}
+
+.noPaddingRight {
+    padding-right: 0px;
+}
+
+.jumbotron {
+    background-color: #fff;
+}
+
+body {
+    list-style: none;
+    min-width: 900px;
+    min-height: 600px;
+    overflow: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body.home .leftPane {
+    margin-bottom: 0px;
+}
+
+body.login,
+body.register {
+    padding-top: 90px;
+}
+
+body.home .jumbotron {
+    padding-top: 0px;
+}
+
+body.login,
+body.register {
+    color: #007aff;
+}
+
+body.login input,
+body.register input,
+body.login input:focus,
+body.register input:focus {
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    padding: 0px;
+    font-weight: bold;
+    border-bottom: solid 1px #000;
+    border-radius: 0px;
+}
+
+body.login .btn,
+body.register .btn {
+    background-color: #007aff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+}
+
+body.login a.btn,
+body.register a.btn {
+    color: #007aff;
+    background-color: #fff;
+}
+
+body.home .topBar {
+    background-color: #f2f2f2;
+    position: fixed;
+    top: 0px;
+    margin-left: 0px;
+    padding: 5px 0px;
+    z-index: 999;
+    margin-right: 0px;
+}
+
+body.home .topBar #newMessageDiv{
+    padding-left: 6px;
+}
+
+body.register .topBar .contactPicDiv {
+    width: 100px;
+    cursor: pointer;
+}
+
+body.register img#contactPic {
+    height: 70px;
+    width: 70px;
+}
+
+.btn-login {
+    background-color: #59B2E0;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 14px 0;
+    text-transform: uppercase;
+    border-color: #59B2E6;
+}
+
+.btn-login:hover,
+.btn-login:focus {
+    color: #fff;
+    background-color: #53A3CD;
+    border-color: #53A3CD;
+}
+
+.btn-register {
+    background-color: #1CB94E;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 14px 0;
+    text-transform: uppercase;
+    border-color: #1CB94A;
+}
+
+.btn-register:hover,
+.btn-register:focus {
+    color: #fff;
+    background-color: #1CA347;
+    border-color: #1CA347;
+}
+
+.btn.logout {
+    margin-top: 5px;
+    float: right;
+    background-color: inherit;
+    color: #ff3b30;
+    font-weight: bold;    
+}
+
+.btn.logout:hover {
+    background-color: #ff3b30;
+    color: #fff;
+}
+
+/*
+Contact Div
+ */
+#contactsListDiv {
+    background-color: #fff;
+    border-right: solid 2px #f2f2f2;
+    margin-top: 50px;
+    list-style: none;
+    padding: 0px;
+    max-height: 85vh;
+    min-height: 85vh;
+    overflow-y: scroll;
+    margin-bottom: 0px;
+}
+
+.contactDiv {
+    padding-left: : 5px;
+    border-bottom: 1px solid;
+    border-bottom-color: #8b8d8e;
+    height: 75px;
+    cursor: pointer;
+}
+
+.contactDiv.active {
+    background-color: #c5cadd;
+}
+
+.contactDiv .contactImageDiv img {
+    width: 60px;
+    border: 2px solid #cfcfcf;
+    margin: 5px;
+    float: left;
+    background-color: #fff;
+    height: 60px;
+}
+
+.contactDiv.active .contactImageDiv img {
+    border-color: #efefef;
+    background-color: #fff;
+}
+
+.contactDiv .unreadImageDiv {
+    color: #00d000;
+}
+
+.contactDiv .contactName {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+    vertical-align: top;
+    font-size: 14px;
+    float: left;
+    margin-top: 5px;
+}
+
+.contactDiv .lastInteractionTime {
+    float: right;
+    vertical-align: top;
+    font-size: 10px;
+    margin-right: 5px;
+    color: #7f8cff;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.contactDiv .lastInteractionText {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    float: left;
+    width: 200px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 15px;
+    color: #a8a8a8;
+    margin-top: 5px;
+}
+
+.contactDiv.active .lastInteractionText {
+    color: #000;
+}
+
+#searchBar {
+    margin-top: 5px;
+    float: left;
+}
+
+#searchBar input {
+    border-radius: 15px;
+}
+
+#newMessage i:hover {
+    border-color: #555555;
+    background-color: #888888;
+    color: #fff;
+}
+
+#conversationHeader .toLabel,
+#conversationHeader .fromLabel {
+    font-weight: bold;
+}
+
+#conversationName,
+#conversationFromName {
+    text-indent: 5px;
+}
+
+#conversationHeader {
+    padding: 10px;
+    border-bottom: 1px solid #8b8d8e;
+    display: block;
+}
+
+#conversationDiv {
+    background-color: #e6e9ec;
+    max-height: 78vh;
+    min-height: 78vh;
+    overflow-y: scroll;
+}
+
+#conversationDiv .conversation * {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.conversation .message .conversationContactPic {
+    width: 30px;
+    height: 30px;
+}
+
+.conversation .message p {
+    margin: 0px;
+}
+
+.conversation .message .imageDiv img {
+    padding: 10px;
+    border-radius: 15px;
+    max-height: 40vh;
+    cursor: pointer;
+}
+
+.conversation .message .sentMessage,
+.conversation .message .receivedMessage {
+    max-width: 65%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px 10px;
+    border-radius: 25px;
+    word-wrap: break-word;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.conversation .message {
+    display: block;
+    padding: 10px;
+}
+
+.conversation .message .sentMessage {
+    float: right;
+    clear: both;
+    color: #000;
+    background-color: #c1ec76;
+    border-bottom-right-radius: 20px 0px\9;
+}
+
+.conversation .message .sentMessage:before {
+    content: "";
+    z-index: 1;
+    bottom: -2px;
+    right: -8px;
+    height: 19px;
+    border-right: 15px solid #c1ec76;
+    border-bottom-left-radius: 16px 14px;
+    -webkit-transform: translate(0, -2px);
+    transform: translate(0, -2px);
+    border-bottom-left-radius: 15px 0px\9;
+    transform: translate(-1px, -2px)\9;
+    position: absolute;
+}
+
+.conversation .message .sentMessage:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: -2px;
+    right: -42px;
+    width: 12px;
+    height: 20px;
+    background: #e6e9ec;
+    border-bottom-left-radius: 10px;
+    -webkit-transform: translate(-30px, -2px);
+    transform: translate(-30px, -2px);
+}
+
+.conversation .message .receivedMessage {
+    float: left;
+    clear: both;
+    color: #000;
+    background-color: #ddb2f2;
+}
+
+.conversation .message .receivedMessage:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    bottom: -2px;
+    left: -7px;
+    height: 19px;
+    border-left: 15px solid #ddb2f2;
+    border-bottom-right-radius: 16px 14px;
+    -webkit-transform: translate(0, -2px);
+    transform: translate(0, -2px);
+    border-bottom-right-radius: 15px 0px\9;
+    transform: translate(-1px, -2px)\9;
+}
+
+.conversation .message .receivedMessage:after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    bottom: -2px;
+    left: 4px;
+    width: 26px;
+    height: 20px;
+    background: #e6e9ec;
+    border-bottom-right-radius: 10px;
+    -webkit-transform: translate(-30px, -2px);
+    transform: translate(-30px, -2px);
+}
+
+.conversation .message .timestampDiv {
+    color: #a8a8a8;
+    font-size: 10px;
+}
+
+.sendMessageDiv {
+    margin-top: 10px;
+    padding: 0px 5px;
+}
+
+.sendMessageDiv input {
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.sendMessageDiv input:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.sendMessageDiv .btn {
+    margin-right: 15px;
+    background-color: #c1ec76;
+    color: #000;
+    font-weight: bold;
+}
+
+#addImage {
+    padding: 5px;
+    cursor: pointer;
+}
+
+#imageUpload {
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+}
+
+#showContactsModal .modal-footer .btn {
+    background-color: #007aff;
+    color: #fff;
+}
+
+#showContactsModal .modal-content .contactsDiv {
+    max-height: 40vh;
+    overflow: scroll;
+    margin-top: 30px;
+}
+
+#showContactsModal .modal-content .contactsDiv .contactEntry {
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    padding: 15px;
+}
+
+#showContactsModal .modal-content .contactsDiv .contactEntry:hover {
+    color: #000;
+    background-color: #c5cadd;
+}
+
+#showContactsModal .modal-content .contactsDiv .contactEntry img {
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    float: left;
+    border: 1px solid #000;
+}
+
+#showContactsModal .modal-content .contactsDiv .contactEntry .col-sm-9{
+    margin-left: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#searchContact {
+    position: absolute;
+    height: 30px;
+}
+
+#searchContact {
+    padding-bottom: 10px;
+    font-weight: bold;
+    border: none;
+    border-bottom: solid 1px #000;
+    outline: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+#searchContact:focus {
+    outline: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}

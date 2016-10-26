@@ -1,0 +1,179 @@
+﻿<div class="container">
+    <div class="panel panel-default">
+        <div class="row">
+            <div class="col-sm-4 noPaddingRight">
+                <div class="panel panel-default leftPane">
+                    <div class="row topBar">
+                        <div class="col-sm-2" id="newMessageDiv">
+                            <div id="newMessage" ng-click="newMessage()">
+                                <i class="fa fa-edit fa-2x fa-border" aria-hidden="true" title="New Message"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-7" id="searchBar">
+                            <div>
+                                <input class="form-control" type="text" placeholder="Search" ng-model="searchConversationText" ng-change="searchForMatchingConversations()">
+                            </div>
+                        </div>
+                        <div class="col-sm-1 pull-right">
+                            <a class="btn logout" id="logoutButton" href="#logout">Logout</a>
+                        </div>
+                    </div>
+                    <ul class="sidebar-nav" id="contactsListDiv">
+                        <li ng-repeat="conversation in conversations | filter:searchConversationText | orderBy:'-timestamp'" ng-click="selectContact(conversation)" class="contactDiv" ng-class="(conversation.userId === selectedContact.userId)?'active':''" id="conversation_{{conversation.userId}}">
+                            <div class="row">
+                                <div class="col-sm-3 contactImageDiv">
+                                    <img ng-src="{{conversation.imageData}}" class="img-rounded" alt="Photo" />
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-sm-2 conversationInfo noPaddingLeft">
+                                            <span class="contactName">{{conversation.fullName}}</span>
+                                        </div>
+                                        <div class="col-sm-2 pull-right" ng-hide="conversation.newMessage">
+                                            <span class="lastInteractionTime">{{getDateTimeFromTimestamp(conversation.timestamp)}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-10 noPaddingLeft">
+                                            <span class="lastInteractionText">{{conversation.messageText}}</span>
+                                        </div>
+                                        <div class="col-sm-2 pull-right unreadImageDiv" ng-show="conversation.unreadMessageCount">
+                                            {{conversation.unreadMessageCount}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-8 noPaddingLeft">
+                <!-- Landing Div -->
+                <div class="container-fluid" ng-show="showLandingDiv" id="landingDiv">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1>Welcome to iMessage</h1>
+                            <p>Hey <strong>{{currentUserFullName}}</strong>, select any contact to chat with them</p>
+                        </div>
+                    </div>
+                </div>
+                <div ng-show="!showLandingDiv">
+                    <div class="container-fluid" id="conversationHeader">
+                        <span class="pull-left toLabel">To: </span>
+                        <div id="conversationName" class="pull-left">{{selectedContact.fullName}}</div>
+                        <div id="conversationFromName" class="pull-right">{{currentUserFullName}}</div>
+                        <span class="pull-right fromLabel">From: </span>
+                    </div>
+                    <!-- Conversation Div -->
+                    <div class="container-fluid" id="conversationDiv">
+                        <div class="row" id="loadingGif" ng-show="showLoadingDiv">
+                            <div class="col-lg-12 text-center">
+                                <img src="images/loading.gif" alt="Loading..." />
+                                <p>Loading conversation</p>
+                            </div>
+                        </div>
+                        <div class="conversation">
+                            <div ng-repeat="message in messages[selectedContact.userId]" class="message">
+                                <div ng-class="(currentUserId == message.from)?'sentMessage':'receivedMessage'">
+                                    <p>{{message.text}}</p>
+                                    <div ng-show="message.image" class="imageDiv">
+                                        <img ng-src="{{message.blobURL}}" class="img-responsive" ng-click="showImageModal(this.message)" />
+                                    </div>
+                                    <span class="timestampDiv pull-right">{{getDateTimeFromTimestamp(message.timestamp, true)}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal sendMessageDiv" id="sendMessageDiv">
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="messageText" placeholder="Your message" ng-model="messageText" ng-keypress="$event.keyCode == 13 && sendMessage()">
+                            </div>
+                            <button class="btn col-sm-1 pull-right" ng-click="sendMessage()">Send</button>
+                            <div class="pull-right" id="addImage" ng-click="addImage()">
+                                <i class="fa fa-picture-o fa-2x" aria-hidden="true" title="Add Image"></i>
+                            </div>
+                            <input type="file" id="imageUpload" name="imageUpload" onchange="angular.element(this).scope().imageSelected(this.files)" accept="image/png, image/jpeg, image/jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modals -->
+            <!-- Upload Image Modal -->
+            <div class="modal fade bd-example-modal-sm" id="uploadImageModal" tabindex="-1" role="dialog" aria-labelledby="uploadImageModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">Send Image</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img src="" id="uploadImageModalImgDiv" class="img-thumbnail" />
+                        </div>
+                        <div class="modal-footer">
+                            <div class="form-horizontal sendMessageDiv" id="sendMessageWithImageDiv">
+                                <div class="form-group">
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="messageTextWithImage" placeholder="Your message" ng-model="messageTextWithImage" ng-keypress="$event.keyCode == 13 && sendMessageWithImage()">
+                                    </div>
+                                    <button class="btn col-sm-3 pull-right" ng-click="sendMessageWithImage()">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Show Image Modal -->
+            <div class="modal fade bd-example-modal-lg" id="showImageModal" tabindex="-1" role="dialog" aria-labelledby="showImageModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="showImageModalMessageText">
+                            </div>
+                            <img src="" id="showImageModalImgDiv" class="img-thumbnail" />
+                        </div>
+                        <div class="modal-footer" id="showImageModalMessageTexttt">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Show Contacts Modal -->
+            <div class="modal fade bd-example-modal-sm" id="showContactsModal" tabindex="-1" role="dialog" aria-labelledby="showContactsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">Send message to:</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="input-group col-lg-10">
+                                <input class="form-control" type="text" placeholder="Search" id="searchContact" ng-model="searchContactText">
+                            </div>
+                            <div class="contactsDiv">
+                                <div class="row">
+                                    <div ng-repeat="contact in contacts | filter:searchContactText" class="col-lg-10 contactEntry" ng-click="addContactToConversation(contact, true, true, false)">
+                                        <div class="col-sm-2">
+                                            <img ng-src="{{contact.imageData}}" class="img-rounded" />
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <span class='contactName'>{{contact.fullName}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
