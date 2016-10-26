@@ -1,0 +1,261 @@
+{"level":"info","message":"Loaded db - server/data/imessage.db","timestamp":"2016-10-26T17:35:58.401Z"}
+{"level":"info","message":"Server listening on port 5000","timestamp":"2016-10-26T17:35:58.487Z"}
+{"level":"info","message":"[QUERY] SELECT count(*) as count FROM user_info where username = 'joe'","timestamp":"2016-10-26T17:44:11.671Z"}
+{"level":"info","message":"[ACCOUNT CREATION] SUCCESS joe","timestamp":"2016-10-26T17:44:11.674Z"}
+{"level":"info","message":"[QUERY] SELECT count(*) as count FROM user_info where username = 'batman'","timestamp":"2016-10-26T17:44:38.686Z"}
+{"level":"info","message":"[ACCOUNT CREATION] SUCCESS batman","timestamp":"2016-10-26T17:44:38.689Z"}
+{"level":"info","message":"[QUERY] SELECT count(*) as count FROM user_info where username = 'bruce'","timestamp":"2016-10-26T17:44:51.148Z"}
+{"level":"info","message":"[ACCOUNT CREATION] SUCCESS bruce","timestamp":"2016-10-26T17:44:51.149Z"}
+{"level":"info","message":"[QUERY] SELECT count(*) as count FROM user_info where username = 'bruce'","timestamp":"2016-10-26T17:45:34.070Z"}
+{"level":"info","message":"[ACCOUNT CREATION] SUCCESS bruce","timestamp":"2016-10-26T17:45:34.070Z"}
+{"level":"info","message":"[QUERY] SELECT count(*) as count FROM user_info where username = 'clark'","timestamp":"2016-10-26T17:45:49.814Z"}
+{"level":"info","message":"[ACCOUNT CREATION] SUCCESS clark","timestamp":"2016-10-26T17:45:49.816Z"}
+{"level":"info","message":"[QUERY] SELECT count(*) as count FROM user_info where username = 'superman'","timestamp":"2016-10-26T17:46:08.824Z"}
+{"level":"info","message":"[ACCOUNT CREATION] SUCCESS superman","timestamp":"2016-10-26T17:46:08.825Z"}
+{"level":"info","message":"[QUERY] SELECT count(*) as count FROM user_info where username = 'michael'","timestamp":"2016-10-26T17:46:35.103Z"}
+{"level":"info","message":"[ACCOUNT CREATION] SUCCESS michael","timestamp":"2016-10-26T17:46:35.104Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'joe' and password = '1234'","timestamp":"2016-10-26T17:46:40.244Z"}
+{"level":"info","message":"[LOGIN] SUCCESS joe","timestamp":"2016-10-26T17:46:40.245Z"}
+{"level":"info","message":"[CONNECTED] userId 1","timestamp":"2016-10-26T17:46:40.253Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:46:40.284Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '1-', ''), '-1', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 1 OR to_user_id = 1 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T17:46:40.285Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:46:40.286Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 1","timestamp":"2016-10-26T17:46:40.289Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:46:44.788Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:46:44.790Z"}
+{"level":"info","message":"[LOGOUT] userId 1","timestamp":"2016-10-26T17:46:59.272Z"}
+{"level":"info","message":"[DISCONNECTED] userId upGPFPSy4mU1QO-tAAAC","timestamp":"2016-10-26T17:46:59.296Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'joe' and password = '1234'","timestamp":"2016-10-26T17:49:28.703Z"}
+{"level":"info","message":"[LOGIN] SUCCESS joe","timestamp":"2016-10-26T17:49:28.704Z"}
+{"level":"info","message":"[CONNECTED] userId 1","timestamp":"2016-10-26T17:49:28.709Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:49:28.734Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '1-', ''), '-1', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 1 OR to_user_id = 1 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T17:49:28.734Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:49:28.735Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 1","timestamp":"2016-10-26T17:49:28.739Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:49:58.507Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:49:58.508Z"}
+{"level":"info","message":"[LOGOUT] userId 1","timestamp":"2016-10-26T17:51:33.970Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'joe' and password = '1234'","timestamp":"2016-10-26T17:51:37.892Z"}
+{"level":"info","message":"[LOGIN] SUCCESS joe","timestamp":"2016-10-26T17:51:37.893Z"}
+{"level":"info","message":"[CONNECTED] userId 1","timestamp":"2016-10-26T17:51:37.898Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:51:37.911Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '1-', ''), '-1', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 1 OR to_user_id = 1 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T17:51:37.913Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:51:37.913Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 1","timestamp":"2016-10-26T17:51:37.917Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:51:39.033Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:51:39.034Z"}
+{"level":"info","message":"[QUERY] UPDATE messages set message_unread = 0 where conversation_id ='1-6'","timestamp":"2016-10-26T17:51:40.480Z"}
+{"level":"info","message":"[QUERY] SELECT from_user_id, to_user_id, message_text, timestamp, message_image, image_data FROM messages WHERE conversation_id='1-6';","timestamp":"2016-10-26T17:51:40.483Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched for 6 - 1","timestamp":"2016-10-26T17:51:40.483Z"}
+{"level":"info","message":"[LOGOUT] userId 1","timestamp":"2016-10-26T17:52:20.722Z"}
+{"level":"info","message":"[DISCONNECTED] userId kBJIHIE0hz0uqwjLAAAD","timestamp":"2016-10-26T17:52:20.732Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'joe' and password = '1234'","timestamp":"2016-10-26T17:52:24.281Z"}
+{"level":"info","message":"[LOGIN] SUCCESS joe","timestamp":"2016-10-26T17:52:24.282Z"}
+{"level":"info","message":"[CONNECTED] userId 1","timestamp":"2016-10-26T17:52:24.289Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:52:24.321Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '1-', ''), '-1', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 1 OR to_user_id = 1 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T17:52:24.321Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:52:24.322Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 1","timestamp":"2016-10-26T17:52:24.329Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:52:25.541Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:52:25.543Z"}
+{"level":"info","message":"[QUERY] UPDATE messages set message_unread = 0 where conversation_id ='1-6'","timestamp":"2016-10-26T17:52:27.671Z"}
+{"level":"info","message":"Loaded db - server/data/imessage.db","timestamp":"2016-10-26T17:53:15.717Z"}
+{"level":"info","message":"Server listening on port 5000","timestamp":"2016-10-26T17:53:15.813Z"}
+{"level":"info","message":"Loaded db - server/data/imessage.db","timestamp":"2016-10-26T17:54:19.088Z"}
+{"level":"info","message":"Server listening on port 5000","timestamp":"2016-10-26T17:54:19.176Z"}
+{"level":"info","message":"[QUERY] SELECT from_user_id, to_user_id, message_text, timestamp, message_image, image_data FROM messages WHERE conversation_id='1-6';","timestamp":"2016-10-26T17:54:19.749Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched for 6 - 1","timestamp":"2016-10-26T17:54:19.754Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'joe' and password = '1234'","timestamp":"2016-10-26T17:54:26.266Z"}
+{"level":"info","message":"[LOGIN] SUCCESS joe","timestamp":"2016-10-26T17:54:26.267Z"}
+{"level":"info","message":"[CONNECTED] userId 1","timestamp":"2016-10-26T17:54:26.274Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:54:26.307Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '1-', ''), '-1', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 1 OR to_user_id = 1 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T17:54:26.308Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:54:26.310Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 1","timestamp":"2016-10-26T17:54:26.314Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:54:27.673Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:54:27.674Z"}
+{"level":"info","message":"[QUERY] UPDATE messages set message_unread = 0 where conversation_id ='1-6'","timestamp":"2016-10-26T17:54:29.386Z"}
+{"level":"info","message":"[QUERY] SELECT from_user_id, to_user_id, message_text, timestamp, message_image, image_data FROM messages WHERE conversation_id='1-6';","timestamp":"2016-10-26T17:54:29.388Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched for 6 - 1","timestamp":"2016-10-26T17:54:29.389Z"}
+{"level":"info","message":"Loaded db - server/data/imessage.db","timestamp":"2016-10-26T17:55:08.263Z"}
+{"level":"info","message":"Server listening on port 5000","timestamp":"2016-10-26T17:55:08.352Z"}
+{"level":"info","message":"[LOGOUT] userId 1","timestamp":"2016-10-26T17:55:09.997Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'joe' and password = '1234'","timestamp":"2016-10-26T17:55:13.770Z"}
+{"level":"info","message":"[LOGIN] SUCCESS joe","timestamp":"2016-10-26T17:55:13.772Z"}
+{"level":"info","message":"[CONNECTED] userId 1","timestamp":"2016-10-26T17:55:13.777Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:55:13.809Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '1-', ''), '-1', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 1 OR to_user_id = 1 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T17:55:13.810Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:55:13.812Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 1","timestamp":"2016-10-26T17:55:13.817Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:55:15.429Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:55:15.430Z"}
+{"level":"info","message":"[QUERY] UPDATE messages set message_unread = 0 where conversation_id ='1-6'","timestamp":"2016-10-26T17:55:17.300Z"}
+{"level":"info","message":"[QUERY] SELECT from_user_id, to_user_id, message_text, timestamp, message_image, image_data FROM messages WHERE conversation_id='1-6';","timestamp":"2016-10-26T17:55:17.302Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched for 6 - 1","timestamp":"2016-10-26T17:55:17.302Z"}
+{"level":"info","message":"[LOGOUT] userId 1","timestamp":"2016-10-26T17:56:51.731Z"}
+{"level":"info","message":"[DISCONNECTED] userId DEhURlM0Yi1C_XGQAAAC","timestamp":"2016-10-26T17:56:51.741Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'joe' and password = '1234'","timestamp":"2016-10-26T17:56:55.489Z"}
+{"level":"info","message":"[LOGIN] SUCCESS joe","timestamp":"2016-10-26T17:56:55.490Z"}
+{"level":"info","message":"[CONNECTED] userId 1","timestamp":"2016-10-26T17:56:55.495Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:56:55.523Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '1-', ''), '-1', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 1 OR to_user_id = 1 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T17:56:55.524Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:56:55.525Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 1","timestamp":"2016-10-26T17:56:55.530Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:56:56.476Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:56:56.477Z"}
+{"level":"info","message":"Loaded db - server/data/imessage.db","timestamp":"2016-10-26T17:57:21.637Z"}
+{"level":"info","message":"Server listening on port 5000","timestamp":"2016-10-26T17:57:21.720Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'joe' and password = '1234'","timestamp":"2016-10-26T17:57:26.197Z"}
+{"level":"info","message":"[LOGIN] SUCCESS joe","timestamp":"2016-10-26T17:57:26.199Z"}
+{"level":"info","message":"[CONNECTED] userId 1","timestamp":"2016-10-26T17:57:26.205Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:57:26.237Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '1-', ''), '-1', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 1 OR to_user_id = 1 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T17:57:26.238Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:57:26.239Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 1","timestamp":"2016-10-26T17:57:26.244Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:57:30.235Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:57:30.237Z"}
+{"level":"info","message":"[QUERY] UPDATE messages set message_unread = 0 where conversation_id ='1-6'","timestamp":"2016-10-26T17:57:31.859Z"}
+{"level":"info","message":"[QUERY] SELECT from_user_id, to_user_id, message_text, timestamp, message_image, image_data FROM messages WHERE conversation_id='1-6';","timestamp":"2016-10-26T17:57:31.861Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched for 6 - 1","timestamp":"2016-10-26T17:57:31.861Z"}
+{"level":"info","message":"[LOGOUT] userId 1","timestamp":"2016-10-26T17:57:36.948Z"}
+{"level":"info","message":"[DISCONNECTED] userId 1fFqxpp-Vwb-YNnRAAAA","timestamp":"2016-10-26T17:57:37.064Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'joe' and password = '1234'","timestamp":"2016-10-26T17:57:40.502Z"}
+{"level":"info","message":"[LOGIN] SUCCESS joe","timestamp":"2016-10-26T17:57:40.507Z"}
+{"level":"info","message":"[CONNECTED] userId 1","timestamp":"2016-10-26T17:57:40.511Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:57:40.539Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '1-', ''), '-1', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 1 OR to_user_id = 1 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T17:57:40.540Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:57:40.540Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 1","timestamp":"2016-10-26T17:57:40.543Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T17:57:41.415Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T17:57:41.417Z"}
+{"level":"info","message":"[QUERY] UPDATE messages set message_unread = 0 where conversation_id ='1-6'","timestamp":"2016-10-26T17:57:42.542Z"}
+{"level":"info","message":"[QUERY] SELECT from_user_id, to_user_id, message_text, timestamp, message_image, image_data FROM messages WHERE conversation_id='1-6';","timestamp":"2016-10-26T17:57:42.544Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched for 6 - 1","timestamp":"2016-10-26T17:57:42.544Z"}
+{"level":"info","message":"[MESSAGE] Sent from 1 to 6","timestamp":"2016-10-26T17:57:47.564Z"}
+{"level":"info","message":"[MESSAGE] Sent from 1 to 6","timestamp":"2016-10-26T17:57:51.657Z"}
+{"level":"info","message":"[MESSAGE] Sent from 1 to 6","timestamp":"2016-10-26T17:58:35.489Z"}
+{"level":"info","message":"[LOGOUT] userId 1","timestamp":"2016-10-26T17:59:01.456Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'batman' and password = '1234'","timestamp":"2016-10-26T17:59:07.589Z"}
+{"level":"info","message":"[LOGIN] SUCCESS batman","timestamp":"2016-10-26T17:59:07.590Z"}
+{"level":"info","message":"[CONNECTED] userId 2","timestamp":"2016-10-26T17:59:07.592Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=2 ORDER BY first_name","timestamp":"2016-10-26T17:59:07.605Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '2-', ''), '-2', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 2 OR to_user_id = 2 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T17:59:07.606Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 2","timestamp":"2016-10-26T17:59:07.608Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 2","timestamp":"2016-10-26T17:59:07.611Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=2 ORDER BY first_name","timestamp":"2016-10-26T17:59:09.389Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 2","timestamp":"2016-10-26T17:59:09.391Z"}
+{"level":"info","message":"[QUERY] UPDATE messages set message_unread = 0 where conversation_id ='2-6'","timestamp":"2016-10-26T17:59:10.972Z"}
+{"level":"info","message":"[QUERY] SELECT from_user_id, to_user_id, message_text, timestamp, message_image, image_data FROM messages WHERE conversation_id='2-6';","timestamp":"2016-10-26T17:59:10.974Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched for 6 - 2","timestamp":"2016-10-26T17:59:10.975Z"}
+{"level":"info","message":"[MESSAGE] Sent from 2 to 6","timestamp":"2016-10-26T17:59:26.038Z"}
+{"level":"info","message":"[LOGOUT] userId 2","timestamp":"2016-10-26T17:59:29.143Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'clark' and password = '1234'","timestamp":"2016-10-26T17:59:35.468Z"}
+{"level":"info","message":"[LOGIN] SUCCESS clark","timestamp":"2016-10-26T17:59:35.469Z"}
+{"level":"info","message":"[CONNECTED] userId 4","timestamp":"2016-10-26T17:59:35.472Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=4 ORDER BY first_name","timestamp":"2016-10-26T17:59:35.485Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '4-', ''), '-4', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 4 OR to_user_id = 4 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T17:59:35.485Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 4","timestamp":"2016-10-26T17:59:35.486Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 4","timestamp":"2016-10-26T17:59:35.489Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=4 ORDER BY first_name","timestamp":"2016-10-26T17:59:36.991Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 4","timestamp":"2016-10-26T17:59:36.992Z"}
+{"level":"info","message":"[QUERY] UPDATE messages set message_unread = 0 where conversation_id ='4-6'","timestamp":"2016-10-26T17:59:39.523Z"}
+{"level":"info","message":"[QUERY] SELECT from_user_id, to_user_id, message_text, timestamp, message_image, image_data FROM messages WHERE conversation_id='4-6';","timestamp":"2016-10-26T17:59:39.525Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched for 6 - 4","timestamp":"2016-10-26T17:59:39.526Z"}
+{"level":"info","message":"[MESSAGE] Sent from 4 to 6","timestamp":"2016-10-26T17:59:48.425Z"}
+{"level":"info","message":"[LOGOUT] userId 4","timestamp":"2016-10-26T17:59:50.595Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'superman' and password = '1234'","timestamp":"2016-10-26T17:59:54.532Z"}
+{"level":"info","message":"[LOGIN] SUCCESS superman","timestamp":"2016-10-26T17:59:54.532Z"}
+{"level":"info","message":"[CONNECTED] userId 5","timestamp":"2016-10-26T17:59:54.536Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=5 ORDER BY first_name","timestamp":"2016-10-26T17:59:54.548Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '5-', ''), '-5', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 5 OR to_user_id = 5 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T17:59:54.549Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 5","timestamp":"2016-10-26T17:59:54.550Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 5","timestamp":"2016-10-26T17:59:54.553Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=5 ORDER BY first_name","timestamp":"2016-10-26T17:59:58.913Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 5","timestamp":"2016-10-26T17:59:58.916Z"}
+{"level":"info","message":"[QUERY] UPDATE messages set message_unread = 0 where conversation_id ='5-6'","timestamp":"2016-10-26T18:00:01.359Z"}
+{"level":"info","message":"[QUERY] SELECT from_user_id, to_user_id, message_text, timestamp, message_image, image_data FROM messages WHERE conversation_id='5-6';","timestamp":"2016-10-26T18:00:01.361Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched for 6 - 5","timestamp":"2016-10-26T18:00:01.361Z"}
+{"level":"info","message":"[MESSAGE] Sent from 5 to 6","timestamp":"2016-10-26T18:00:29.585Z"}
+{"level":"info","message":"[MESSAGE] Sent from 5 to 6","timestamp":"2016-10-26T18:01:16.785Z"}
+{"level":"info","message":"[LOGOUT] userId 5","timestamp":"2016-10-26T18:01:21.713Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'michael' and password = '1234'","timestamp":"2016-10-26T18:01:26.110Z"}
+{"level":"info","message":"[LOGIN] SUCCESS michael","timestamp":"2016-10-26T18:01:26.110Z"}
+{"level":"info","message":"[CONNECTED] userId 6","timestamp":"2016-10-26T18:01:26.117Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=6 ORDER BY first_name","timestamp":"2016-10-26T18:01:26.132Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '6-', ''), '-6', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 6 OR to_user_id = 6 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T18:01:26.132Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 6","timestamp":"2016-10-26T18:01:26.133Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 6","timestamp":"2016-10-26T18:01:26.137Z"}
+{"level":"info","message":"[QUERY] UPDATE messages set message_unread = 0 where conversation_id ='5-6'","timestamp":"2016-10-26T18:02:31.548Z"}
+{"level":"info","message":"[QUERY] SELECT from_user_id, to_user_id, message_text, timestamp, message_image, image_data FROM messages WHERE conversation_id='5-6';","timestamp":"2016-10-26T18:02:31.556Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched for 5 - 6","timestamp":"2016-10-26T18:02:31.557Z"}
+{"level":"info","message":"[LOGOUT] userId 6","timestamp":"2016-10-26T18:04:05.884Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'michael' and password = '1234'","timestamp":"2016-10-26T18:04:10.443Z"}
+{"level":"info","message":"[LOGIN] SUCCESS michael","timestamp":"2016-10-26T18:04:10.444Z"}
+{"level":"info","message":"[CONNECTED] userId 6","timestamp":"2016-10-26T18:04:10.447Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=6 ORDER BY first_name","timestamp":"2016-10-26T18:04:10.459Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '6-', ''), '-6', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 6 OR to_user_id = 6 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T18:04:10.460Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 6","timestamp":"2016-10-26T18:04:10.461Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 6","timestamp":"2016-10-26T18:04:10.465Z"}
+{"level":"info","message":"[LOGOUT] userId 1","timestamp":"2016-10-26T18:05:28.345Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'joe' and password = '1234'","timestamp":"2016-10-26T18:05:31.185Z"}
+{"level":"info","message":"[LOGIN] SUCCESS joe","timestamp":"2016-10-26T18:05:31.186Z"}
+{"level":"info","message":"[CONNECTED] userId 1","timestamp":"2016-10-26T18:05:31.191Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T18:05:31.202Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '1-', ''), '-1', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 1 OR to_user_id = 1 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T18:05:31.203Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T18:05:31.204Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 1","timestamp":"2016-10-26T18:05:31.208Z"}
+{"level":"info","message":"[QUERY] UPDATE messages set message_unread = 0 where conversation_id ='1-6'","timestamp":"2016-10-26T18:05:35.869Z"}
+{"level":"info","message":"[QUERY] SELECT from_user_id, to_user_id, message_text, timestamp, message_image, image_data FROM messages WHERE conversation_id='1-6';","timestamp":"2016-10-26T18:05:35.871Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched for 1 - 6","timestamp":"2016-10-26T18:05:35.872Z"}
+{"level":"info","message":"[LOGOUT] userId 1","timestamp":"2016-10-26T18:05:37.904Z"}
+{"level":"info","message":"[DISCONNECTED] userId GwYRhv9v0r4SGnPEAAAB","timestamp":"2016-10-26T18:05:38.024Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'joe' and password = '1234'","timestamp":"2016-10-26T18:05:43.065Z"}
+{"level":"info","message":"[LOGIN] SUCCESS joe","timestamp":"2016-10-26T18:05:43.065Z"}
+{"level":"info","message":"[CONNECTED] userId 1","timestamp":"2016-10-26T18:05:43.070Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T18:05:43.095Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '1-', ''), '-1', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 1 OR to_user_id = 1 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T18:05:43.095Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T18:05:43.096Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 1","timestamp":"2016-10-26T18:05:43.102Z"}
+{"level":"info","message":"[QUERY] UPDATE messages set message_unread = 0 where conversation_id ='1-6'","timestamp":"2016-10-26T18:05:44.338Z"}
+{"level":"info","message":"[QUERY] SELECT from_user_id, to_user_id, message_text, timestamp, message_image, image_data FROM messages WHERE conversation_id='1-6';","timestamp":"2016-10-26T18:05:44.344Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched for 6 - 1","timestamp":"2016-10-26T18:05:44.345Z"}
+{"level":"info","message":"[MESSAGE] Sent from 6 to 1","timestamp":"2016-10-26T18:25:59.721Z"}
+{"level":"info","message":"Loaded db - server/data/imessage.db","timestamp":"2016-10-26T18:56:49.727Z"}
+{"level":"info","message":"Server listening on port 5000","timestamp":"2016-10-26T18:56:49.826Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'joe' and password = '1234'","timestamp":"2016-10-26T18:56:54.639Z"}
+{"level":"info","message":"[LOGIN] SUCCESS joe","timestamp":"2016-10-26T18:56:54.640Z"}
+{"level":"info","message":"[CONNECTED] userId 1","timestamp":"2016-10-26T18:56:54.646Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T18:56:54.674Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '1-', ''), '-1', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 1 OR to_user_id = 1 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T18:56:54.675Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T18:56:54.677Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 1","timestamp":"2016-10-26T18:56:54.680Z"}
+{"level":"info","message":"[QUERY] UPDATE messages set message_unread = 0 where conversation_id ='1-6'","timestamp":"2016-10-26T18:56:58.810Z"}
+{"level":"info","message":"[QUERY] SELECT from_user_id, to_user_id, message_text, timestamp, message_image, image_data FROM messages WHERE conversation_id='1-6';","timestamp":"2016-10-26T18:56:58.816Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched for 6 - 1","timestamp":"2016-10-26T18:56:58.817Z"}
+{"level":"info","message":"[LOGOUT] userId 1","timestamp":"2016-10-26T18:57:02.155Z"}
+{"level":"info","message":"[LOGOUT] userId 1","timestamp":"2016-10-26T18:57:03.387Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'joe' and password = '1234'","timestamp":"2016-10-26T18:57:06.567Z"}
+{"level":"info","message":"[LOGIN] SUCCESS joe","timestamp":"2016-10-26T18:57:06.567Z"}
+{"level":"info","message":"[CONNECTED] userId 1","timestamp":"2016-10-26T18:57:06.570Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T18:57:06.583Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '1-', ''), '-1', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 1 OR to_user_id = 1 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T18:57:06.584Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T18:57:06.586Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 1","timestamp":"2016-10-26T18:57:06.590Z"}
+{"level":"info","message":"[QUERY] UPDATE messages set message_unread = 0 where conversation_id ='1-6'","timestamp":"2016-10-26T18:57:08.160Z"}
+{"level":"info","message":"[QUERY] SELECT from_user_id, to_user_id, message_text, timestamp, message_image, image_data FROM messages WHERE conversation_id='1-6';","timestamp":"2016-10-26T18:57:08.166Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched for 6 - 1","timestamp":"2016-10-26T18:57:08.167Z"}
+{"level":"info","message":"Loaded db - server/data/imessage.db","timestamp":"2016-10-26T19:00:38.772Z"}
+{"level":"info","message":"Server listening on port 5000","timestamp":"2016-10-26T19:00:38.860Z"}
+{"level":"info","message":"Loaded db - server/data/imessage.db","timestamp":"2016-10-26T19:00:50.233Z"}
+{"level":"info","message":"Server listening on port 5000","timestamp":"2016-10-26T19:00:50.314Z"}
+{"level":"info","message":"[LOGOUT] userId 1","timestamp":"2016-10-26T19:01:00.866Z"}
+{"level":"info","message":"Loaded db - server/data/imessage.db","timestamp":"2016-10-26T19:01:11.854Z"}
+{"level":"info","message":"Server listening on port 5000","timestamp":"2016-10-26T19:01:11.939Z"}
+{"level":"info","message":"[QUERY] SELECT user_id, first_name, last_name, image_data FROM user_info where username = 'joe' and password = '1234'","timestamp":"2016-10-26T19:01:17.261Z"}
+{"level":"info","message":"[LOGIN] SUCCESS joe","timestamp":"2016-10-26T19:01:17.265Z"}
+{"level":"info","message":"[CONNECTED] userId 1","timestamp":"2016-10-26T19:01:17.271Z"}
+{"level":"info","message":"[QUERY] SELECT first_name, last_name, username, user_id, image_data from user_info where user_id !=1 ORDER BY first_name","timestamp":"2016-10-26T19:01:17.300Z"}
+{"level":"info","message":"[QUERY] SELECT a.first_name, a.last_name, a.image_data, b.message_text, b.timestamp, b.message_image, b.user_id, b.unread_message_count FROM user_info a JOIN (SELECT message_text, timestamp, message_image, image_data, REPLACE(REPLACE(conversation_id, '1-', ''), '-1', '') AS user_id, SUM(message_unread) as unread_message_count FROM messages WHERE from_user_id = 1 OR to_user_id = 1 GROUP BY conversation_id ORDER BY timestamp desc) b ON a.user_id = b.user_id;","timestamp":"2016-10-26T19:01:17.301Z"}
+{"level":"info","message":"[CONTACTS] Fetched for 1","timestamp":"2016-10-26T19:01:17.308Z"}
+{"level":"info","message":"[CONVERSATIONS] Fetched - 1","timestamp":"2016-10-26T19:01:17.314Z"}
+{"level":"info","message":"[LOGOUT] userId 1","timestamp":"2016-10-26T19:01:19.653Z"}
