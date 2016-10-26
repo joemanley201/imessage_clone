@@ -1,0 +1,80 @@
+[
+	{
+		"firstName": "Joe",
+		"lastName": "Manley",
+		"username": "joemanley",
+		"password": 1234
+	},
+	{
+		"firstName": "John",
+		"lastName": "Doe",
+		"username": "johndoe",
+		"password": 1234
+	},
+	{
+		"firstName": "Mary",
+		"lastName": "Doe",
+		"username": "marydoe",
+		"password": 1234
+	},
+	{
+		"firstName": "Bobby",
+		"lastName": "Mattox",
+		"username": "bobbymattox",
+		"password": 1234
+	},
+	{
+		"firstName": "William",
+		"lastName": "Shakespeare",
+		"username": "williamshakespeare",
+		"password": 9999
+	},
+	{
+		"firstName": "Bruce",
+		"lastName": "Wayne",
+		"username": "brucewayne",
+		"password": 1234
+	},
+	{
+		"firstName": "Clark",
+		"lastName": "Kent",
+		"username": "clarkkent",
+		"password": 1234
+	},
+	{
+		"firstName": "Lewis",
+		"lastName": "Hamilton",
+		"username": "lewishamilton",
+		"password": 1234
+	},
+	{
+		"firstName": "Nico",
+		"lastName": "Rosberg",
+		"username": "nicorosberg",
+		"password": 1234
+	},
+	{
+		"firstName": "Kimi",
+		"lastName": "Raikonnen",
+		"username": "kimiraikonnen",
+		"password": 1234
+	},
+	{
+		"firstName": "Sebastian",
+		"lastName": "Vettel",
+		"username": "sebastianvettel",
+		"password": 1234
+	},
+	{
+		"firstName": "Big",
+		"lastName": "Ben",
+		"username": "bigben",
+		"password": 1234
+	},
+	{
+		"firstName": "Big",
+		"lastName": "Brother",
+		"username": "bigbrother",
+		"password": 1234
+	}
+]
