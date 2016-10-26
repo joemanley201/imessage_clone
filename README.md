@@ -77,11 +77,11 @@ The recipient can now reply to images and enjoy their conversation.
 
 
 ### Features
-- [x] Search conversations, contacts
-- [x] Conversations, messages sorted based on timestamp
-- [x] Relative timestamps using Moment.js
-- [x] Logging activities using Winston
-- [x] Configurable settings
+- [x] **Search conversations, contacts**
+- [x] **Conversations, messages sorted based on timestamp**
+- [x] **Relative timestamps using Moment.js**
+- [x] **Logging activities using Winston**
+- [x] **Configurable settings**
 - [ ] Encryption of passwords and messages
 - [ ] Sending smileys by using Unicode characters
 - [ ] Video calling using WebRTC
