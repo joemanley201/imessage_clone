@@ -38,6 +38,7 @@ Clone of iMessage Application
 
 ### Registration
 Even though there are existing users already (if you had downloaded the imessage.db file), you can create your own contact from the registration page.
+
 ![registration]
 [registration]: screenshots/1_register_small.png
 
