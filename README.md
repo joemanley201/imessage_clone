@@ -53,34 +53,29 @@ It looks empty without any conversations or messages. So let's send a message to
 ### New message
 Select any one of the contacts to start sending messages to them.
 
-![contacts_modal]
-[contacts_modal]: screenshots/4_contacts_modal_small.png
+![contacts_modal](screenshots/4_contacts_modal_small.png)
 
 
 ### Send messages with images
 You can send normal text messages as well as send images along with them.
 
 
-![send_message_with_image]
-[send_message_with_image]: screenshots/5_send_messages_with_image_small.png
+![send_message_with_image](screenshots/5_send_messages_with_image_small.png)
 
 ### Receiving messages
 The recipient gets notifications with the number of unread messages in their conversation list, while logged in or after logging in.
 
-![recipient_home]
-[recipient_home]: screenshots/6_micael_home_page_small.png
+![recipient_home](screenshots/6_micael_home_page_small.png)
 
 ### Reading messages
 The recipient can click on a contact to read the new messages. Once the contact is opened, notification is sent to the DB to clear the unread message flag for that conversation.
 
-![recipient_unread]
-[recipient_unread]: screenshots/7_chat_with_images_unread_small.png
+![recipient_unread](screenshots/7_chat_with_images_unread_small.png)
 
 ### Replying to messages
 The recipient can now reply to images and enjoy their conversation.
 
-![recipient_reply]
-[recipient_reply]: screenshots/8_more_conversation_small.png
+![recipient_reply](screenshots/8_more_conversation_small.png)
 
 
 ### Features
