@@ -39,18 +39,15 @@ Clone of iMessage Application
 ### Registration
 Even though there are existing users already (if you had downloaded the imessage.db file), you can create your own contact from the registration page.
 
-![registration]
-[registration]: screenshots/1_register_small.png
+![registration](screenshots/1_register_small.png)
 
 ### Login
-![login]
-[login]: screenshots/2_login_small.png
+![login](screenshots/2_login_small.png)
 
 ### Home page - User
 It looks empty without any conversations or messages. So let's send a message to someone in our contact list.
 
-![home_page]
-[home_page]: screenshots/3_landing_page_small.png
+![home_page](screenshots/3_landing_page_small.png)
 
 
 ### New message
